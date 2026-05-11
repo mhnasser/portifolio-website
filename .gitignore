@@ -1,0 +1,17 @@
+# large files not needed in production
+*.zip
+
+# reference-only material (not served by the site)
+uploads/
+
+# internal tooling
+.superpowers/
+docs/
+
+# Claude Code
+CLAUDE.md
+.claude/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
