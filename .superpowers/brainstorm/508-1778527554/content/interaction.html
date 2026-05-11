@@ -1,0 +1,134 @@
+<style>
+  .shelf-demo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 6px;
+    height: 200px;
+    padding: 16px;
+    background: #f5ede0;
+    border-radius: 12px;
+    margin: 12px 0;
+    position: relative;
+  }
+  .spine-demo {
+    width: 44px;
+    height: 170px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: rgba(255,255,255,0.85);
+    position: relative;
+    flex-shrink: 0;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  }
+  .spine-demo.faded { opacity: 0.45; transform: scaleX(0.92); }
+  .card-overlay {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    height: 185px;
+    background: #1a1a2e;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    overflow: hidden;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-cover-strip {
+    flex: 1;
+    background: linear-gradient(135deg, #3a6e68 0%, #1f4a37 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: rgba(255,255,255,0.6);
+  }
+  .card-info-strip {
+    background: #1a1a2e;
+    padding: 6px 8px;
+  }
+  .card-info-strip .ctitle { font-size: 9px; font-weight: 700; color: #fff; }
+  .card-info-strip .cauthor { font-size: 8px; color: rgba(255,255,255,0.5); margin-top: 1px; }
+
+  .detail-below {
+    margin-top: 10px;
+    background: #1a1a2e;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .detail-cover {
+    width: 40px;
+    height: 55px;
+    background: linear-gradient(135deg, #3a6e68, #1f4a37);
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  .detail-text { flex: 1; }
+  .detail-text .dt { font-size: 9px; font-weight: 700; color: #fff; }
+  .detail-text .da { font-size: 8px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+  .detail-text .dn { font-size: 8px; color: rgba(255,255,255,0.4); margin-top: 4px; line-height: 1.4; }
+</style>
+
+<h2>Como o card aparece ao clicar na lombada?</h2>
+<p class="subtitle">Dois comportamentos diferentes — qual parece certo?</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Card flutua sobre a estante (como as referências)</h3>
+      <p>A lombada selecionada "abre" no lugar, exibindo um card alto que sobrepõe os outros livros. Os livros ao redor ficam visíveis e levemente recuados.</p>
+      <div class="shelf-demo">
+        <div class="spine-demo faded" style="background:#4a7c59">HANDS-ON ML</div>
+        <div class="spine-demo faded" style="background:#0b5876">CLEAN CODE</div>
+        <div class="card-overlay">
+          <div class="card-cover-strip">📗 capa</div>
+          <div class="card-info-strip">
+            <div class="ctitle">Fund. Arquitetura</div>
+            <div class="cauthor">RICHARDS · FORD</div>
+          </div>
+        </div>
+        <div class="spine-demo faded" style="background:#c8302e">A ÚNICA COISA</div>
+        <div class="spine-demo faded" style="background:#1f3a6b">ESTATÍSTICA</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Detalhe aparece abaixo da estante (comportamento atual)</h3>
+      <p>A lombada fica destacada mas no lugar. Um painel de detalhe aparece abaixo da estante com capa, título, autor e nota — sem sobrepor nada.</p>
+      <div class="shelf-demo" style="flex-direction:column; height: auto; padding: 10px;">
+        <div style="display:flex; gap:6px; align-items:flex-end; height:170px;">
+          <div class="spine-demo" style="background:#4a7c59; opacity:0.6">HANDS-ON ML</div>
+          <div class="spine-demo" style="background:#0b5876; opacity:0.6">CLEAN CODE</div>
+          <div class="spine-demo" style="background:#2d2d2d; outline: 2px solid #d4a857">FUND. ARQ.</div>
+          <div class="spine-demo" style="background:#c8302e; opacity:0.6">A ÚNICA COISA</div>
+          <div class="spine-demo" style="background:#1f3a6b; opacity:0.6">ESTATÍSTICA</div>
+        </div>
+        <div class="detail-below" style="width:100%">
+          <div class="detail-cover"></div>
+          <div class="detail-text">
+            <div class="dt">Fundamentos de Arquitetura de Software</div>
+            <div class="da">MARK RICHARDS · NEAL FORD</div>
+            <div class="dn">A ciência de dados está cada vez mais perto da engenharia...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
