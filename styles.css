@@ -501,24 +501,26 @@ main {
 }
 
 .section {
-  padding: 100px 80px;
-  min-height: 100vh;
+  padding: 80px 80px;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
 }
 
+#hero { min-height: 100vh; }
+
 @media (max-width: 1100px) {
-  .section { padding: 80px 56px; }
+  .section { padding: 64px 56px; }
 }
 
 @media (max-width: 760px) {
-  .section { padding: 70px 24px; min-height: auto; }
+  .section { padding: 56px 24px; }
 }
 
 @media (max-width: 480px) {
-  .section { padding: 60px 18px; }
+  .section { padding: 48px 18px; }
 }
 
 .eyebrow {
@@ -1163,29 +1165,36 @@ main {
   flex: 0 0 88px;
   height: 560px;
   border: none;
-  border-radius: 3px 6px 6px 3px;
+  border-radius: 3px 7px 7px 3px;
   background-color: var(--book-color, #4a7c59);
   background-image:
-    /* vertical shading: dark left edge, highlight, dark right edge (3D) */
+    /* convex spine highlight — soft light catching the curved spine */
+    radial-gradient(
+      ellipse 80% 95% at 32% 50%,
+      rgba(255,255,255,0.20) 0%,
+      rgba(255,255,255,0.06) 40%,
+      transparent 65%
+    ),
+    /* vertical 3D shading: dark binding edge, highlight crest, dark fore-edge */
     linear-gradient(
       to right,
-      rgba(0,0,0,0.42) 0%,
-      rgba(0,0,0,0.10) 18%,
-      rgba(255,255,255,0.10) 42%,
-      rgba(0,0,0,0.08) 68%,
-      rgba(0,0,0,0.35) 100%
+      rgba(0,0,0,0.52) 0%,
+      rgba(0,0,0,0.14) 14%,
+      rgba(255,255,255,0.12) 38%,
+      rgba(0,0,0,0.10) 66%,
+      rgba(0,0,0,0.44) 100%
     ),
     /* diagonal leather grain */
     repeating-linear-gradient(
       158deg,
       transparent 0px, transparent 7px,
-      rgba(0,0,0,0.022) 7px, rgba(0,0,0,0.022) 8px
+      rgba(0,0,0,0.028) 7px, rgba(0,0,0,0.028) 8px
     ),
     /* horizontal micro-grain */
     repeating-linear-gradient(
       90deg,
       transparent 0px, transparent 3px,
-      rgba(255,255,255,0.012) 3px, rgba(255,255,255,0.012) 4px
+      rgba(255,255,255,0.015) 3px, rgba(255,255,255,0.015) 4px
     );
   overflow: hidden;
   cursor: pointer;
@@ -1194,25 +1203,26 @@ main {
     opacity 0.3s ease,
     transform 0.3s ease;
   box-shadow:
-    inset -4px 0 10px rgba(0,0,0,0.3),
-    4px 0 8px rgba(0,0,0,0.4),
-    0 8px 24px rgba(0,0,0,0.22);
+    inset -6px 0 14px rgba(0,0,0,0.35),
+    inset 3px 0 6px rgba(255,255,255,0.07),
+    5px 0 12px rgba(0,0,0,0.48),
+    0 10px 30px rgba(0,0,0,0.26);
 }
 
-/* top gold accent strip */
+/* subtle gloss hairline below headband */
 .bs-book::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
+  top: 12px;
+  left: 8%;
+  right: 8%;
+  height: 1px;
   background: linear-gradient(90deg,
-    color-mix(in oklab, var(--book-color, #4a7c59) 45%, #c8922a 55%),
-    color-mix(in oklab, var(--book-color, #4a7c59) 25%, #e8b84b 75%),
-    color-mix(in oklab, var(--book-color, #4a7c59) 45%, #c8922a 55%)
+    transparent,
+    rgba(255,255,255,0.30) 30%,
+    rgba(255,255,255,0.30) 70%,
+    transparent
   );
-  opacity: 0.85;
   pointer-events: none;
   z-index: 5;
 }
@@ -1221,12 +1231,61 @@ main {
 .bs-book::before {
   content: "";
   position: absolute;
-  inset: 10px;
-  border: 1px dashed rgba(255,255,255,0.32);
+  inset: 12px;
+  border: 0.5px dashed rgba(255,255,255,0.28);
   border-radius: 1px;
   pointer-events: none;
   z-index: 4;
   transition: opacity 0.2s ease;
+}
+
+/* ─── headbands (decorative fabric strips at top & bottom of spine) ──── */
+
+.bs-headband-t,
+.bs-headband-b {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 11px;
+  pointer-events: none;
+  z-index: 6;
+  overflow: hidden;
+}
+
+.bs-headband-t {
+  top: 0;
+  border-radius: 3px 7px 0 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      color-mix(in oklab, var(--book-color, #4a7c59) 35%, #d4a857 65%) 0px,
+      color-mix(in oklab, var(--book-color, #4a7c59) 35%, #d4a857 65%) 4px,
+      rgba(255,255,255,0.82) 4px,
+      rgba(255,255,255,0.82) 5.5px,
+      color-mix(in oklab, var(--book-color, #4a7c59) 15%, #b8802a 85%) 5.5px,
+      color-mix(in oklab, var(--book-color, #4a7c59) 15%, #b8802a 85%) 8px,
+      color-mix(in oklab, var(--book-color, #4a7c59) 55%, #c8922a 45%) 8px,
+      color-mix(in oklab, var(--book-color, #4a7c59) 55%, #c8922a 45%) 11px
+    );
+  box-shadow: 0 2px 4px rgba(0,0,0,0.22);
+}
+
+.bs-headband-b {
+  bottom: 0;
+  border-radius: 0 0 7px 3px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      color-mix(in oklab, var(--book-color, #4a7c59) 35%, #d4a857 65%) 0px,
+      color-mix(in oklab, var(--book-color, #4a7c59) 35%, #d4a857 65%) 4px,
+      rgba(255,255,255,0.82) 4px,
+      rgba(255,255,255,0.82) 5.5px,
+      color-mix(in oklab, var(--book-color, #4a7c59) 15%, #b8802a 85%) 5.5px,
+      color-mix(in oklab, var(--book-color, #4a7c59) 15%, #b8802a 85%) 8px,
+      color-mix(in oklab, var(--book-color, #4a7c59) 55%, #c8922a 45%) 8px,
+      color-mix(in oklab, var(--book-color, #4a7c59) 55%, #c8922a 45%) 11px
+    );
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.22);
 }
 
 /* ─── diamond ornaments ───────────────────────────────────────────────── */
@@ -1289,6 +1348,29 @@ main {
   text-shadow: 0 1px 3px rgba(0,0,0,0.3);
   transition: opacity 0.2s ease;
   z-index: 2;
+}
+
+/* ─── author credit on spine (resting state only) ────────────────────── */
+
+.bs-spine-author {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  font-weight: 500;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.52);
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 2;
+  overflow: hidden;
+  max-height: 45%;
 }
 
 /* ─── "lendo agora" badge ─────────────────────────────────────────────── */
@@ -1389,18 +1471,18 @@ main {
   height: 43%;
   opacity: 0;
   overflow: hidden;
-  padding: 8px 10px;
-  background: rgba(0,0,0,0.3);
+  padding: 10px 12px;
+  background: rgba(0,0,0,0.32);
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 5px;
   transition: opacity 0.2s ease 0.22s;
   z-index: 2;
 }
 
 .bs-info-title {
   font-family: var(--font-display);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   color: rgba(255,255,255,0.95);
   margin: 0;
@@ -1413,7 +1495,7 @@ main {
 
 .bs-info-author {
   font-family: var(--font-mono);
-  font-size: 7.5px;
+  font-size: 9px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gold);
@@ -1422,12 +1504,12 @@ main {
 
 .bs-info-note {
   font-family: var(--font-serif);
-  font-size: 8.5px;
-  line-height: 1.45;
-  color: rgba(255,255,255,0.6);
+  font-size: 11px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.7);
   margin: 0;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1444,6 +1526,7 @@ main {
 
 .bs-book.is-active .bs-icon,
 .bs-book.is-active .bs-spine-title,
+.bs-book.is-active .bs-spine-author,
 .bs-book.is-active .bs-deco-t,
 .bs-book.is-active .bs-deco-b {
   opacity: 0;
@@ -1478,13 +1561,41 @@ main {
   .bs-book { flex-basis: 70px; height: 420px; }
   .bs-book.is-active { flex-basis: 250px; }
   .bs-book.is-inactive { flex-basis: 46px; }
-  .bs-spine-title { font-size: 15px; }
+
+  /* anchor title from bottom so beginning of title is always visible */
+  .bs-spine-title {
+    top: auto;
+    bottom: 58px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    font-size: 13px;
+    letter-spacing: 0.13em;
+    max-height: 65%;
+    overflow: hidden;
+  }
+
+  .bs-spine-author {
+    font-size: 6.5px;
+    bottom: 22px;
+    max-height: 30%;
+  }
 }
 
 @media (max-width: 480px) {
   .bs-book { flex-basis: 60px; height: 340px; }
   .bs-book.is-active { flex-basis: 210px; }
-  .bs-spine-title { font-size: 13px; }
+
+  .bs-spine-title {
+    font-size: 10px;
+    letter-spacing: 0.10em;
+    bottom: 48px;
+    max-height: 63%;
+  }
+
+  .bs-spine-author {
+    font-size: 6px;
+    bottom: 18px;
+  }
 }
 
 /* ─── contact ───────────────────────────────────────────────────────── */

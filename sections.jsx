@@ -264,6 +264,8 @@ function Reading({ t }) {
                 onClick={() => setHovered(hovered === i ? null : i)}
                 aria-label={b.title}
               >
+                <span className="bs-headband-t" aria-hidden="true" />
+                <span className="bs-headband-b" aria-hidden="true" />
                 <span className="bs-deco-t" aria-hidden="true">◆</span>
                 <span className="bs-deco-b" aria-hidden="true">◆</span>
                 <span className="bs-icon" aria-hidden="true">
@@ -273,11 +275,11 @@ function Reading({ t }) {
                   </svg>
                 </span>
                 <span className="bs-spine-title">{b.title}</span>
+                <span className="bs-spine-author" aria-hidden="true">{b.author}</span>
                 <div className="bs-cover">
                   <img
                     src={b.cover}
                     alt={`Capa — ${b.title}`}
-                    loading="lazy"
                     onError={(e) => {
                       e.currentTarget.style.display = "none";
                       e.currentTarget.parentElement.classList.add("no-cover");
