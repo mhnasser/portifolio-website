@@ -275,14 +275,18 @@ function Reading({ t }) {
                   </svg>
                 </span>
                 <span className="bs-spine-title">{b.title}</span>
-                <span className="bs-spine-author" aria-hidden="true">{b.author}</span>
                 <div className="bs-cover">
                   <img
                     src={b.cover}
                     alt={`Capa — ${b.title}`}
                     onError={(e) => {
-                      e.currentTarget.style.display = "none";
-                      e.currentTarget.parentElement.classList.add("no-cover");
+                      const img = e.currentTarget;
+                      if (b.coverCdn && img.src !== b.coverCdn) {
+                        img.src = b.coverCdn;
+                      } else {
+                        img.style.display = "none";
+                        img.parentElement.classList.add("no-cover");
+                      }
                     }}
                   />
                   <div className="bs-cover-fallback">

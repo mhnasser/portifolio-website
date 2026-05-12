@@ -102,6 +102,7 @@ window.I18N = {
           author: "AURÉLIEN GÉRON",
           color: "#e9b94a",
           cover: "assets/ml-handson.jpg",
+          coverCdn: "https://covers.openlibrary.org/b/isbn/9781492032649-L.jpg",
           note: "A bíblia prática de ML. Aurélien sai do zero, ensina os fundamentos com scikit-learn e termina te colocando pra treinar redes profundas com Keras e TensorFlow. Exercícios mão-na-massa em todos os capítulos — é o livro que me deu vocabulário pra conversar sobre modelos com qualquer engenheiro.",
         },
         {
@@ -109,6 +110,7 @@ window.I18N = {
           author: "MARIANO ANAYA",
           color: "#0b5876",
           cover: "assets/clean_code_python.jpg",
+          coverCdn: "https://covers.openlibrary.org/b/isbn/9781800560215-L.jpg",
           note: "Preferi ler o Clean Code em Python por ser a linguagem que tenho maior afinidade. Os princípios são os mesmos do clássico do Uncle Bob, mas vistos pelas lentes de generators, dataclasses, type hints e padrões idiomáticos do Python — muito mais útil no dia a dia de quem entrega em Python.",
         },
         {
@@ -116,6 +118,7 @@ window.I18N = {
           author: "PETER BRUCE · ANDREW BRUCE",
           color: "#1f3a6b",
           cover: "assets/estatistica-para-ds.jpg",
+          coverCdn: "https://covers.openlibrary.org/b/isbn/9788550804712-L.jpg",
           note: "Um canivete suíço de técnicas. Além de cobrir o que importa de inferência, regressão e classificação, ensina conceitos essenciais de amostragem que muita gente pula — livro fundamental pra construir modelos generalizáveis e robustos.",
         },
         {
@@ -124,6 +127,7 @@ window.I18N = {
           author: "MARK RICHARDS · NEAL FORD",
           color: "#2d2d2d",
           cover: "assets/fund_arquitetura.jpg",
+          coverCdn: "https://covers.openlibrary.org/b/isbn/9788550816579-L.jpg",
           note: "A ciência de dados está cada vez mais perto da engenharia de software — cientistas construindo agentes, orquestrando IAs, pensando em sistemas. Considero leitura essencial. Ainda estou nele.",
           reading: true,
         },
@@ -133,6 +137,7 @@ window.I18N = {
           author: "GARY KELLER",
           color: "#c8302e",
           cover: "assets/a-unica-coisa.jpg",
+          coverCdn: "https://covers.openlibrary.org/b/isbn/9788576845911-L.jpg",
           note: "Não sou muito fã desse gênero, mas como sou um cara disperso e nunca sei muito bem no que focar, esse livro me ajudou bastante a segurar a ansiedade de querer estudar e fazer tudo, e a focar nas tarefas que realmente me levam para as minhas prioridades.",
         },
       ],
@@ -259,6 +264,7 @@ window.I18N = {
           author: "AURÉLIEN GÉRON",
           color: "#e9b94a",
           cover: "assets/ml-handson.jpg",
+          coverCdn: "https://covers.openlibrary.org/b/isbn/9781492032649-L.jpg",
           note: "The practical ML bible. Aurélien starts from zero, teaches the fundamentals with scikit-learn and finishes with deep networks in Keras and TensorFlow. Hands-on exercises in every chapter — this is the book that gave me the vocabulary to talk about models with any engineer.",
         },
         {
@@ -266,6 +272,7 @@ window.I18N = {
           author: "MARIANO ANAYA",
           color: "#0b5876",
           cover: "assets/clean_code_python.jpg",
+          coverCdn: "https://covers.openlibrary.org/b/isbn/9781800560215-L.jpg",
           note: "I chose to read Clean Code through Python — the language I'm most fluent in. The principles are the same as Uncle Bob's classic, but seen through generators, dataclasses, type hints and Python idioms. Much more useful day-to-day for anyone shipping in Python.",
         },
         {
@@ -273,6 +280,7 @@ window.I18N = {
           author: "PETER BRUCE · ANDREW BRUCE",
           color: "#1f3a6b",
           cover: "assets/estatistica-para-ds.jpg",
+          coverCdn: "https://covers.openlibrary.org/b/isbn/9788550804712-L.jpg",
           note: "A swiss-army knife of techniques. Beyond the essentials of inference, regression and classification, it teaches the sampling concepts most people skip — essential reading for building generalizable, robust models.",
         },
         {
@@ -281,6 +289,7 @@ window.I18N = {
           author: "MARK RICHARDS · NEAL FORD",
           color: "#2d2d2d",
           cover: "assets/fund_arquitetura.jpg",
+          coverCdn: "https://covers.openlibrary.org/b/isbn/9788550816579-L.jpg",
           note: "Data science is moving closer and closer to software engineering — data scientists building agents, orchestrating AIs, thinking in systems. I consider this essential reading. Still working through it.",
           reading: true,
         },
@@ -290,6 +299,7 @@ window.I18N = {
           author: "GARY KELLER",
           color: "#c8302e",
           cover: "assets/a-unica-coisa.jpg",
+          coverCdn: "https://covers.openlibrary.org/b/isbn/9788576845911-L.jpg",
           note: "Not really my genre, but I'm a scattered guy who never quite knows what to focus on, and this book helped me tame the anxiety of wanting to study and do everything — and to focus on the tasks that actually move me toward my priorities.",
         },
       ],

@@ -1350,29 +1350,6 @@ main {
   z-index: 2;
 }
 
-/* ─── author credit on spine (resting state only) ────────────────────── */
-
-.bs-spine-author {
-  position: absolute;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%) rotate(180deg);
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  white-space: nowrap;
-  font-family: var(--font-mono);
-  font-size: 7.5px;
-  font-weight: 500;
-  letter-spacing: 0.20em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.52);
-  pointer-events: none;
-  transition: opacity 0.2s ease;
-  z-index: 2;
-  overflow: hidden;
-  max-height: 45%;
-}
-
 /* ─── "lendo agora" badge ─────────────────────────────────────────────── */
 
 .bs-flag {
@@ -1425,11 +1402,14 @@ main {
 }
 
 .bs-cover img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
   display: block;
+  z-index: 1;
 }
 
 .bs-cover-fallback {
@@ -1471,22 +1451,23 @@ main {
   height: 43%;
   opacity: 0;
   overflow: hidden;
-  padding: 10px 12px;
-  background: rgba(0,0,0,0.32);
+  padding: 10px 12px 14px;
+  background: rgba(0,0,0,0.36);
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
   transition: opacity 0.2s ease 0.22s;
   z-index: 2;
 }
 
 .bs-info-title {
   font-family: var(--font-display);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
-  color: rgba(255,255,255,0.95);
+  color: rgba(255,255,255,0.96);
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.15;
+  flex-shrink: 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -1495,22 +1476,21 @@ main {
 
 .bs-info-author {
   font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.1em;
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold);
   margin: 0;
+  flex-shrink: 0;
 }
 
 .bs-info-note {
   font-family: var(--font-serif);
-  font-size: 11px;
-  line-height: 1.5;
-  color: rgba(255,255,255,0.7);
+  font-size: 12.5px;
+  line-height: 1.52;
+  color: rgba(255,255,255,0.75);
   margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
+  flex: 1;
   overflow: hidden;
 }
 
@@ -1526,7 +1506,6 @@ main {
 
 .bs-book.is-active .bs-icon,
 .bs-book.is-active .bs-spine-title,
-.bs-book.is-active .bs-spine-author,
 .bs-book.is-active .bs-deco-t,
 .bs-book.is-active .bs-deco-b {
   opacity: 0;
@@ -1565,20 +1544,15 @@ main {
   /* anchor title from bottom so beginning of title is always visible */
   .bs-spine-title {
     top: auto;
-    bottom: 58px;
+    bottom: 24px;
     left: 50%;
     transform: translateX(-50%) rotate(180deg);
     font-size: 13px;
     letter-spacing: 0.13em;
-    max-height: 65%;
+    max-height: 76%;
     overflow: hidden;
   }
 
-  .bs-spine-author {
-    font-size: 6.5px;
-    bottom: 22px;
-    max-height: 30%;
-  }
 }
 
 @media (max-width: 480px) {
@@ -1588,13 +1562,8 @@ main {
   .bs-spine-title {
     font-size: 10px;
     letter-spacing: 0.10em;
-    bottom: 48px;
-    max-height: 63%;
-  }
-
-  .bs-spine-author {
-    font-size: 6px;
-    bottom: 18px;
+    bottom: 30px;
+    max-height: 72%;
   }
 }
 
