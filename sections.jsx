@@ -43,11 +43,6 @@ function About({ t }) {
               <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
             ))}
           </div>
-          <div className="about-quote">
-            <span className="qmark">“</span>
-            <p>{t.about.quote}</p>
-            <cite>— {t.about.quoteCite}</cite>
-          </div>
         </div>
         <div className="scene">
           <div className="scene-setup">
@@ -95,7 +90,7 @@ function Experience({ t }) {
       </div>
       <div className="timeline">
         {t.experience.items.map((item, i) => {
-          const colors = ["", "gold", "rust", "deep", ""];
+          const colors = ["", "gold", "rust", "deep", "", "gold"];
           return (
             <div key={i} className={`tl-item ${i % 2 === 0 ? "right" : "left"}`}>
               <div className="tl-empty"></div>

@@ -825,40 +825,6 @@ main {
   50%      { width: 27%; opacity: .35; }
 }
 
-.about-quote {
-  margin-top: 40px;
-  padding-top: 32px;
-  border-top: 1px solid var(--line);
-  max-width: 560px;
-}
-
-.about-quote .qmark {
-  font-family: var(--font-display);
-  color: var(--gold);
-  font-size: 36px;
-  line-height: 1;
-}
-
-.about-quote p {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 19px;
-  color: var(--ink-2);
-  line-height: 1.5;
-  margin: 8px 0 0;
-}
-
-.about-quote cite {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  margin-top: 12px;
-  font-style: normal;
-}
-
 /* ─── skills grid ───────────────────────────────────────────────────── */
 
 .section-head-center {

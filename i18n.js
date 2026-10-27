@@ -16,7 +16,7 @@ window.I18N = {
       explorer: "~/portfolio",
     },
     hero: {
-      tagline: ["DATA SCIENTIST", "GENAI", "MLOPS"],
+      tagline: ["AI ENGINEER", "DATA SCIENTIST", "GENAI"],
       status: "Disponível para colaborações",
       explore: "Explore",
     },
@@ -24,11 +24,9 @@ window.I18N = {
       eyebrow: "SOBRE",
       title: "Algumas Palavras",
       paragraphs: [
-        'Tech Lead, Data Scientist e <em class="highlight">AI Engineer</em>. Comecei como estagiário em CX analytics na Mobly em 2020, automatizando relatórios e construindo bots em Selenium. Cinco anos depois, lidero iniciativas técnicas de <em class="highlight">IA generativa</em> — desenhando arquiteturas com LLMs, RAG e agentes que entram em produção.',
-        'No meio do caminho: modelos de <em class="gold">credit scoring e antifraude</em> no setor financeiro, ciclo de vida de ML em uma multinacional industrial, e a primeira viagem por NLP e LLMs em uma startup. O fio condutor: <strong>traduzir problemas de negócio em sistemas que funcionam de verdade</strong>.',
+        '<em class="highlight">Engenheiro de IA</em> e Data Scientist. Comecei como estagiário em CX analytics na Mobly em 2020, automatizando relatórios e construindo bots em Selenium. Hoje, na Iguatemi, desenho soluções de <em class="highlight">IA generativa</em> e sistemas multiagentes — do discovery com as áreas de negócio até avaliação, governança e produção. Antes disso, liderei tecnicamente iniciativas de GenAI na Guidance.',
+        'No meio do caminho: modelos de churn e forecasting em uma startup, ciclo de vida de ML em uma multinacional industrial, e modelos de <em class="gold">credit scoring e antifraude</em> no setor financeiro — onde também dei os primeiros passos com NLP e LLMs. O fio condutor: <strong>traduzir problemas de negócio em sistemas que funcionam de verdade</strong>.',
       ],
-      quote: "Em Deus nós confiamos. Todos os outros devem trazer dados.",
-      quoteCite: "W. EDWARDS DEMING",
     },
     skills: {
       eyebrow: "STACK TÉCNICA",
@@ -38,11 +36,18 @@ window.I18N = {
     experience: {
       eyebrow: "EXPERIÊNCIA",
       title: "Por Onde Passei",
-      sub: "De estagiário em analytics a tech lead em GenAI.",
+      sub: "De estagiário em analytics a engenheiro de IA.",
       now: "ATUAL",
       items: [
         {
-          date: "2025 — ATUAL",
+          date: "2026 — ATUAL",
+          company: "Iguatemi S.A.",
+          role: "Engenheiro de IA",
+          desc: "Discovery com áreas de negócio e arquitetura de soluções de GenAI e sistemas multiagentes em Azure e Snowflake. Pipelines de IDP com LLMs, AI Evals, PoCs e pilotos — com governança, privacidade e segurança de IA desde o início.",
+          tags: ["Agentic AI", "Azure", "Snowflake", "IDP", "AI Evals"],
+        },
+        {
+          date: "2025 — 2026",
           company: "Guidance",
           role: "Tech Lead · Data Scientist",
           desc: "Liderança técnica de iniciativas de IA generativa: desenho de arquiteturas com LLMs, RAG e agentes autônomos. LangChain, Agno, AWS — sistemas que vão para produção e geram valor real.",
@@ -72,7 +77,7 @@ window.I18N = {
         {
           date: "2020 — 2021",
           company: "Mobly",
-          role: "Data Analyst (Estagiário → CLT)",
+          role: "Estagiário → Data Analyst",
           desc: "Onde tudo começou. Automação de relatórios de CX, bots em Selenium, AWS Athena e Glue. Primeiro contato sério com dados em produção.",
           tags: ["CX Analytics", "RPA", "Selenium", "AWS"],
         },
@@ -178,7 +183,7 @@ window.I18N = {
       explorer: "~/portfolio",
     },
     hero: {
-      tagline: ["DATA SCIENTIST", "GENAI", "MLOPS"],
+      tagline: ["AI ENGINEER", "DATA SCIENTIST", "GENAI"],
       status: "Available for collaborations",
       explore: "Explore",
     },
@@ -186,11 +191,9 @@ window.I18N = {
       eyebrow: "ABOUT",
       title: "A Few Words",
       paragraphs: [
-        'Tech Lead, Data Scientist and <em class="highlight">AI Engineer</em>. I started as a CX analytics intern at Mobly back in 2020, automating reports and building Selenium bots. Five years later, I lead <em class="highlight">GenAI initiatives</em> — designing LLM, RAG and agent architectures that ship to production.',
-        'Along the way: <em class="gold">credit scoring and fraud-prevention</em> models in finance, full ML lifecycle at a multinational industrial company, and a first dive into NLP and LLMs at a startup. The thread: <strong>turning business problems into systems that actually work</strong>.',
+        '<em class="highlight">AI Engineer</em> and Data Scientist. I started as a CX analytics intern at Mobly back in 2020, automating reports and building Selenium bots. Today, at Iguatemi, I design <em class="highlight">GenAI</em> solutions and multi-agent systems — from discovery with business teams to evaluation, governance and production. Before that, I was tech lead for GenAI initiatives at Guidance.',
+        'Along the way: churn and forecasting models at a startup, full ML lifecycle at a multinational industrial company, and <em class="gold">credit scoring and fraud-prevention</em> models in finance — where I also took my first steps with NLP and LLMs. The thread: <strong>turning business problems into systems that actually work</strong>.',
       ],
-      quote: "In God we trust. All others must bring data.",
-      quoteCite: "W. EDWARDS DEMING",
     },
     skills: {
       eyebrow: "TECHNICAL STACK",
@@ -200,11 +203,18 @@ window.I18N = {
     experience: {
       eyebrow: "EXPERIENCE",
       title: "Where I've Been",
-      sub: "From analytics intern to GenAI tech lead.",
+      sub: "From analytics intern to AI engineer.",
       now: "PRESENT",
       items: [
         {
-          date: "2025 — PRESENT",
+          date: "2026 — PRESENT",
+          company: "Iguatemi S.A.",
+          role: "AI Engineer",
+          desc: "Discovery with business teams and architecture of GenAI solutions and multi-agent systems on Azure and Snowflake. LLM-powered IDP pipelines, AI evals, PoCs and pilots — with AI governance, privacy and security built in from day one.",
+          tags: ["Agentic AI", "Azure", "Snowflake", "IDP", "AI Evals"],
+        },
+        {
+          date: "2025 — 2026",
           company: "Guidance",
           role: "Tech Lead · Data Scientist",
           desc: "Technical leadership of GenAI initiatives: architectures with LLMs, RAG, and autonomous agents. LangChain, Agno, AWS — systems that ship to production and create real value.",
@@ -234,7 +244,7 @@ window.I18N = {
         {
           date: "2020 — 2021",
           company: "Mobly",
-          role: "Data Analyst (Intern → FT)",
+          role: "Intern → Data Analyst",
           desc: "Where it all started. CX reporting automation, Selenium bots, AWS Athena and Glue. First serious contact with production data.",
           tags: ["CX Analytics", "RPA", "Selenium", "AWS"],
         },
