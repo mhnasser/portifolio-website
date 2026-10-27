@@ -106,7 +106,7 @@ function App() {
           <Contact t={i18n} />
           <footer className="foot">
             <span>{i18n.footer.built}</span>
-            <span>● {i18n.footer.heartbeat}</span>
+            <span>● {i18n.footer.training}</span>
           </footer>
         </main>
       </div>

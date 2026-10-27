@@ -1578,17 +1578,6 @@ main {
 
 .contact-links a svg { width: 18px; height: 18px; }
 
-.contact-email {
-  display: inline-block;
-  margin-top: 28px;
-  font-family: var(--font-mono);
-  font-size: 14px;
-  color: var(--ink-2);
-  border-bottom: 1px dashed var(--gold);
-  padding-bottom: 2px;
-  text-decoration: none;
-}
-
 footer.foot {
   padding: 28px 80px;
   border-top: 1px solid var(--line-soft);

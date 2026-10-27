@@ -325,7 +325,6 @@ function Contact({ t }) {
           EMAIL
         </a>
       </div>
-      <a className="contact-email" href={`mailto:${t.contact.email}`}>{t.contact.email}</a>
     </section>
   );
 }

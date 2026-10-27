@@ -164,7 +164,7 @@ window.I18N = {
     },
     footer: {
       built: "Feito com café, código e foco.",
-      heartbeat: "Heartbeat ativo",
+      training: `Epoch ${new Date().getFullYear() - 2019}/∞ — treinando desde 2020`,
     },
   },
   en: {
@@ -331,7 +331,7 @@ window.I18N = {
     },
     footer: {
       built: "Built with coffee, code, and focus.",
-      heartbeat: "Heartbeat live",
+      training: `Epoch ${new Date().getFullYear() - 2019}/∞ — training since 2020`,
     },
   },
 };
@@ -387,24 +387,24 @@ window.CERTIFICATES = [
 
 // Skills with official logos (CDN: simpleicons.org / devicons)
 window.SKILLS = [
-  { name: "Python",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-  { name: "R",           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" },
+  { name: "Python",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.18.0/icons/python/python-original.svg" },
+  { name: "R",           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.18.0/icons/r/r-original.svg" },
   { name: "LangChain",   icon: "https://cdn.simpleicons.org/langchain/1C3C3C" },
-  { name: "PyTorch",     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
-  { name: "TensorFlow",  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+  { name: "PyTorch",     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.18.0/icons/pytorch/pytorch-original.svg" },
+  { name: "TensorFlow",  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.18.0/icons/tensorflow/tensorflow-original.svg" },
   { name: "Keras",       icon: "https://cdn.simpleicons.org/keras/D00000" },
   { name: "Hugging Face",icon: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg" },
   { name: "scikit-learn",icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" },
-  { name: "Pandas",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
-  { name: "NumPy",       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
-  { name: "FastAPI",     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
+  { name: "Pandas",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.18.0/icons/pandas/pandas-original.svg" },
+  { name: "NumPy",       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.18.0/icons/numpy/numpy-original.svg" },
+  { name: "FastAPI",     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.18.0/icons/fastapi/fastapi-original.svg" },
   { name: "Flask",       icon: "https://cdn.simpleicons.org/flask/000000" },
-  { name: "Django",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
-  { name: "AWS",         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
-  { name: "Azure",       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
+  { name: "Django",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.18.0/icons/django/django-plain.svg" },
+  { name: "AWS",         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.18.0/icons/amazonwebservices/amazonwebservices-original.svg" },
+  { name: "Azure",       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.18.0/icons/azure/azure-original.svg" },
   { name: "Databricks",  icon: "https://cdn.simpleicons.org/databricks/FF3621" },
-  { name: "PostgreSQL",  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-  { name: "Docker",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-  { name: "Git",         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+  { name: "PostgreSQL",  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.18.0/icons/postgresql/postgresql-original.svg" },
+  { name: "Docker",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.18.0/icons/docker/docker-original.svg" },
+  { name: "Git",         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.18.0/icons/git/git-original.svg" },
   { name: "Langfuse",    icon: "https://langfuse.com/icon.svg" },
 ];
